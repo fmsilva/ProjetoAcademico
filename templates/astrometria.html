@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+   {% block title %}Astrometria{% endblock %}
+
+   {% block content %}
+       <h2>Astrometria</h2>
+       <ul>
+           <li><a href="{{ url_for('enviar_astrometria') }}">1 - Enviar para astrometria.net</a></li>
+           <li><a href="{{ url_for('verificar_astrometria') }}">2 - Verificar se existem fotos sem astrometria</a></li>
+       </ul>
+   {% endblock %}
+   

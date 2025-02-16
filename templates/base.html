@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Projeto Académico{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head_extra %}{% endblock %} 
+</head>
+<body>
+    <header>
+        <h1>Projeto Académico</h1>
+        {% if session.utilizador %}
+            <p>Olá, {{ session.utilizador }}! | <a href="{{ url_for('logout') }}">Sair</a></p>
+        {% endif %}
+         {% block header %}{% endblock %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}<p>&copy; 2025 ISTEC - Projeto Académico</p>{% endblock %}
+    </footer>
+</body>
+</html>

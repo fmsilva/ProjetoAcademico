@@ -1,0 +1,81 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ddd;
+}
+
+/* Estilos para formulários */
+form {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+ul {
+ list-style: none; /* Remove marcadores */
+    padding: 0;
+}
+ul li a {
+    display: block; /* Transforma links em blocos */
+    padding: 10px 15px;
+    text-decoration: none; /* Remove sublinhado */
+    color: #333;
+    border-bottom: 1px solid #eee; /* Adiciona uma linha separadora */
+}
+
+ul li a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos específicos para mensagens de erro */
+.erro {
+    color: red;
+    font-weight: bold;
+}
+

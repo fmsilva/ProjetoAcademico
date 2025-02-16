@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+   {% block title %}Consultar Fotos{% endblock %}
+
+   {% block content %}
+       <h2>Consultar Fotos</h2>
+       <ul>
+           <li><a href="{{ url_for('consultar_data') }}">1 - Consultar por data</a></li>
+           <li><a href="{{ url_for('consultar_objeto') }}">2 - Consultar por objeto</a></li>
+           <li><a href="{{ url_for('consultar_astrometria_submenu') }}">3 - Consultar astrometria</a></li>
+       </ul>
+   {% endblock %}
+   

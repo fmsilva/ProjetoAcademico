@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Menu Principal{% endblock %}
+
+{% block content %}
+    <h2>Menu Principal</h2>
+    <ul>
+        <li><a href="{{ url_for('inserir_fotos') }}">1 - Inserir Fotos</a></li>
+        <li><a href="{{ url_for('consultar') }}">2 - Consultar Fotos</a></li>
+        <li><a href="{{ url_for('sincronizar') }}">3 - Sincronizar com OneDrive</a></li>
+        <li><a href="{{ url_for('manutencao') }}">4 - Manutenção</a></li>
+        <li><a href="{{ url_for('astrometria') }}">5 - Astrometria</a></li>
+        <li><a href="{{ url_for('logout') }}">6 - Sair</a></li>
+    </ul>
+{% endblock %}

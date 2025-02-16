@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+   {% block title %}Manutenção{% endblock %}
+
+   {% block content %}
+       <h2>Manutenção</h2>
+       <ul>
+           <li><a href="{{ url_for('manutencao_bd') }}">1 - Manutenção da base de dados</a></li>
+           <li><a href="{{ url_for('manutencao_cloud') }}">2 - Manutenção das conectividades com a cloud</a></li>
+           <li><a href="{{ url_for('manutencao_utilizadores') }}">3 - Manutenção de utilizadores</a></li>
+       </ul>
+   {% endblock %}
+
+   
