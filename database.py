@@ -1,3 +1,4 @@
+from datetime import date, timedelta
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -106,6 +107,32 @@ def registar_utilizador(utilizador, password, nome):
     finally:
         conn.close()
 
-# Funções para inserir, consultar, atualizar e apagar dados (fotos, etc.)
-# ... (Implemente aqui as funções CRUD para a tabela de fotografias) ...
 
+# Funções para inserir, consultar, atualizar e apagar dados (fotos, etc.) na base de dados
+def enviar_foto_bd(id_utilizador, nome_ficheiro, caminho_ficheiro, data_hora):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT INTO fotografias (id_utilizador, nome_ficheiro, caminho_ficheiro, data_hora)
+        VALUES (?, ?, ?, ?)
+    """, (id_utilizador, nome_ficheiro, caminho_ficheiro, data_hora))
+    conn.commit()
+    conn.close()
+
+
+# ... (fazer aqui as funções CRUD para a tabela de fotografias) ...
+
+#Consulta de fotos por data
+
+def consultar_fotos_data(utilizador_navegacao, data_inicio, data_fim):
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT * FROM fotografias 
+        WHERE id_utilizador = ? AND data_hora BETWEEN ? AND ?
+        ORDER BY data_hora
+    """, (id_utilizador, data_inicio, data_fim))
+    fotos = cursor.fetchall()
+    conn.close()
+    return fotos

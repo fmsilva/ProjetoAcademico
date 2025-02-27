@@ -3,10 +3,10 @@ import time
 import requests
 from dotenv import load_dotenv
 
+from ProjetoAcademico.app import ASTROMETRY_API_KEY
+
 load_dotenv()
 
-ASTROMETRY_API_KEY = os.getenv("ASTROMETRY_NET_API_KEY")  # Chave da API em .env
-ASTROMETRY_URL = "http://nova.astrometry.net/api/"
 
 
 def submit_to_astrometry(file_path, api_key=ASTROMETRY_API_KEY):

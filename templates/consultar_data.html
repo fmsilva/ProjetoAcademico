@@ -3,7 +3,26 @@
     {% block title %}Consultar por Data{% endblock %}
     
     {% block content %}
-        <h2>Consultar Fotos por Data</h2>
+        <h2>Consultar Fotografias por Data</h2>
+        
+    <table>
+        <thead>
+            <tr>
+                <th>Utilizador</th>
+                <th>Data Início</th>
+                <th>Fotografia</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for foto in fotos %}
+            <tr>
+                <td>{{ foto[1] }}</td> <td>{{ foto[2] }}</td> <td><img src="{{ foto[3] }}" alt="Fotografia"></td> </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    
          Implementar a consulta por data aqui 
+
     {% endblock %}
     

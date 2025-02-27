@@ -5,9 +5,10 @@
    {% block content %}
        <h2>Manutenção</h2>
        <ul>
-           <li><a href="{{ url_for('manutencao_bd') }}">1 - Manutenção da base de dados</a></li>
+           <li><a href="{{ url_for('manutencao_base_dados') }}">1 - Manutenção da base de dados</a></li>
            <li><a href="{{ url_for('manutencao_cloud') }}">2 - Manutenção das conectividades com a cloud</a></li>
            <li><a href="{{ url_for('manutencao_utilizadores') }}">3 - Manutenção de utilizadores</a></li>
+           <li><a href="{{ url_for('manutencao_voltar') }}">4 - Voltar</a></li>
        </ul>
    {% endblock %}
 

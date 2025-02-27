@@ -4,3 +4,5 @@ requests
 onedrivesdk
 astropy
 astroquery
+sqlite3 
+-- Pillow
