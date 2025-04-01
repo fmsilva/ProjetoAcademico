@@ -16,16 +16,8 @@
     </form>
 
     <h2>Registar</h2>
-    <form action="{{ url_for('registar') }}" method="post">
-        <label for="novo_utilizador">Utilizador:</label>
-        <input type="text" id="novo_utilizador" name="utilizador" required><br><br>
+    <a href="{{ url_for('registar') }}">
+        <button>Registar</button>
+    </a>
 
-        <label for="nova_password">Password:</label>
-        <input type="password" id="nova_password" name="password" required><br><br>
-
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
-
-        <button type="submit">Registar</button>
-    </form>
 {% endblock %}

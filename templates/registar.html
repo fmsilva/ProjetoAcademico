@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Registar novo utilizador</h2>
+    {% if erro %}
+        <p style="color: rgb(0, 255, 98);">{{ erro }}</p>
+    {% endif %}
+
+<form action="{{ url_for('registar') }}" method="POST">
+    <label for="novo_utilizador">Utilizador:</label>
+    <input type="text" id="novo_utilizador" name="utilizador" required><br><br>
+
+    <label for="nova_password">Password:</label>
+    <input type="password" id="nova_password" name="password" required><br><br>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <button type="submit">Registar</button>
+</form>
+
+{% endblock %}
